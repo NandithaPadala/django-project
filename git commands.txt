@@ -1,0 +1,19 @@
+```bash
+git init
+```
+
+```bash
+git remote add origin URL
+```
+
+```bash
+git add .
+```
+
+```bash
+git commit -m "commit message"
+```
+
+```bash
+git push -u origin <default branch name>
+```
