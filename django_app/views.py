@@ -5,17 +5,20 @@ def home(request):
     return render(request,'home.html')
 
 def result(request):
-    num1 = int(request.GET.get('number1')) 
-    num2 = int(request.GET.get('number2'))
-    if request.GET.get('Add') == "": 
+    num1 = int(request.POST['number1']) 
+    num2 = int(request.POST['number2'])
+    if request.POST.get('add') == "": 
         ans = num1 + num2
-    elif request.GET.get('subtract') == "":
+    elif request.POST.get('subtract') == "":
         ans = num1 - num2
 
-    elif request.GET.get('multiply') == "":
+    elif request.POST.get('multiply') == "":
         ans = num1 * num2
 
     else: 
         ans = num1 / num2
 
     return render(request, 'result.html', {'ans': ans})
+
+def index(request):
+    return render(request,'index.html', {'name' : 'Nanditha'})
